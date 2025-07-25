@@ -1,0 +1,7 @@
+<div class="products-container">
+  <div *ngFor="let produto of produtos" class="product-card">
+    <img [src]="produto.foto" [alt]="produto.rotulo" class="product-image">
+    <h3 class="product-label">{{ produto.rotulo }}</h3>
+    <p class="product-detail">{{ produto.detalhe }}</p>
+  </div>
+</div>

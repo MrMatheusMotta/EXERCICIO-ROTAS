@@ -1,0 +1,20 @@
+<div class="login-container">
+  <h2>Login</h2>
+  <form (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="username">Usuário:</label>
+      <!-- ngModel bidirecional para vincular o input à propriedade username do componente -->
+      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Senha:</label>
+      <!-- ngModel bidirecional para vincular o input à propriedade password do componente -->
+      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+    </div>
+    <!-- Exibe a mensagem de erro se errorMessage não estiver vazio -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+    <button type="submit">Entrar</button>
+  </form>
+</div>

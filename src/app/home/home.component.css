@@ -1,0 +1,66 @@
+/* Container para organizar os cards em grade */
+.products-container {
+  display: grid; /* Usa CSS Grid para organização em grade */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Colunas responsivas */
+  gap: 20px; /* Espaçamento entre os cards */
+  padding: 20px;
+  justify-content: center; /* Centraliza os cards na grade */
+}
+
+/* Estilo individual para cada card de produto */
+.product-card {
+  background-color: #ffffff; /* Fundo branco para os cards */
+  border: 1px solid #e0e0e0; /* Borda sutil */
+  border-radius: 8px; /* Cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidade */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Efeito de elevação no hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+  cursor: pointer;
+}
+
+/* Estilo para a imagem do produto */
+.product-image {
+  max-width: 100%; /* Garante que a imagem não exceda a largura do card */
+  height: 200px; /* Altura fixa para as imagens, pode ser ajustado */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+  border-radius: 4px; /* Cantos arredondados para a imagem */
+  margin-bottom: 10px;
+}
+
+/* Estilo para o título do produto (rótulo) */
+.product-label {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Estilo para a descrição do produto (detalhe) */
+.product-detail {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Media Queries para Responsividade (Exemplos) */
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Menos colunas em telas menores */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    grid-template-columns: 1fr; /* Uma única coluna em telas muito pequenas */
+    padding: 10px;
+  }
+  .product-image {
+    height: 180px;
+  }
+}

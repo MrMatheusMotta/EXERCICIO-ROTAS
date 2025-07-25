@@ -1,0 +1,45 @@
+.rodape-container {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: auto; /* Garante que o rodapé fique no final da página */
+}
+
+.rodape-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.rodape-content p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.rodape-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.rodape-content a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
